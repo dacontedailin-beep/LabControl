@@ -1,22 +1,31 @@
-import { text, view, stylesheet } from "react-native";
-
-export default function App(){
+ import { StyleSheet, Text, View } from "react-native";
+import { Link} from "expo-router";
+export default function App() {
   return (
     <View style={styles.container}>
-    <Text style={styles.text}>Asistencia</text>
+      <Text style={styles.text}>LabControl</Text>
+      <Link href="/about"  style={styles.button}>
+      Go to About Us
+      </Link>
     </View>
   );
 }
-const styles = stylesheet.create({
+
+const styles = StyleSheet.create({
+  button: {
+    fontSize: 18,
+    color: "#fff",
+    backgroundColor: "#415252",
+  },
   container: {
     flex: 1,
-    justifycontent: "center",
+    justifyContent: "center",
     alignItems: "center",
-    backgroundcolor: "#11c1c1",
+    backgroundColor: "#11c1c1",
   },
   text: {
     color: "#fff",
-    fontssize: 24,
-    fontweight: "bold",
+    fontSize: 24,
+    fontWeight: "bold",
   },
 });
